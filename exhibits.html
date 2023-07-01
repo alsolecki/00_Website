@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/normalize.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet"/>
+
+     <title>Exhibit Gallery</title>
+    
+</head>
+<body>
+<header>
+    <h1>Portfolio</h1>
+</header>
+
+<div class="panels">
+    <div id="p1" class="panel p1-off">
+      <p>City</p>
+      <p>Music</p>
+      <p>Summary</p>
+    </div>
+    <div id="p2" class="panel p2-off">
+      <p>City</p>
+      <p>History</p>
+      <p>Summary</p>
+    </div>
+    <div id="p3" class="panel p3-off">
+      <p>City</p>
+      <p>Nature</p>
+      <p>Summary</p>
+    </div>
+    <div id="p4" class="panel p4-off">
+      <p>City</p>
+      <p>Sports</p>
+      <p>Summary</p>
+    </div>
+    <div id="p5" class="panel p5-off">
+      <p>City</p>
+      <p>Culture</p>
+      <p>Summary</p>
+    </div>
+
+  </div>
+
+  <footer>
+    <h4>Exhibits Designs by Alex Solecki</h4>
+  </footer>
+
+  <style>
+            :root {
+            --darkblue:rgb(15, 60, 104);
+            --darktan:rgb(86, 83, 65);
+        }
+
+
+        h1 {
+            color: white;
+            font-size: 1.5em;
+            padding-left: 30px;
+        }
+
+        h4 {
+            color: white;
+            font-size: .75em;
+            padding-top: 20px;
+            padding-left: 30px;
+
+        }
+
+        html {
+            box-sizing: border-box;
+            background: #000000;
+            font-family: 'helvetica neue';
+            font-size: 20px;
+            font-weight: 200;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        .panels {
+            min-height: 70vh;
+            overflow: hidden;
+            display: flex;
+        }
+
+        .panel {
+            background:var(--darkblue);
+            box-shadow: inset 0 0 0 4px rgba(255,255,255,0.1);
+            color: white;
+            text-align: center;
+            align-items: center;
+            /* Safari transitionend event.propertyName === flex */
+            /* Chrome + FF transitionend event.propertyName === flex-grow */
+            /* transition:
+            font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+            flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+            background 0.7s; */
+            transition: all 1.5s;
+            font-size: 20px;
+            background-size: cover;
+            background-position: center;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            flex: 1 0 auto;
+        }
+
+        /*
+        /////////////   Image Panels  ////////////////
+        */
+
+        .p1-on { 
+                    background-image:url(../images/Bluegrass01.jpg);
+                
+        }
+        .p1-off { background-image:url(../images/Bluegrass01.jpg); 
+                    background-color: var(--darkblue);
+                    background-blend-mode: multiply;
+                
+        }
+
+        .p2-on { 
+                    background-image:url(../images/BrunswickByways01.jpg);
+        }
+        .p2-off { background-image:url(../images/BrunswickByways01.jpg); 
+                    background-color: var(--darkblue);
+                    background-blend-mode: multiply;
+        }
+
+        .p3-on { background-image:url(../images/CentralGallery01.jpg); 
+        }
+        .p3-off { background-image:url(../images/CentralGallery01.jpg); 
+                    background-color: var(--darkblue);
+                    background-blend-mode: multiply;
+        }
+
+        .p4-on { background-image:url(../images/NSHoF01.jpg); 
+        }
+        .p4-off { background-image:url(../images/NSHoF01.jpg); 
+                    background-color: var(--darkblue);
+                    background-blend-mode: multiply;
+        }
+
+        .p5-on { background-image:url(../images/Sailing01.jpeg); 
+        }
+        .p5-off { background-image:url(../images/Sailing01.jpeg); 
+                    background-color:  var(--darkblue);
+                    background-blend-mode: multiply;
+        }
+
+        /* Flex Items */
+        .panel > * {
+            margin: 0;
+            width: 100%;
+            transition: transform 0.75s;
+            flex: 1 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: red solid 2px; */
+        }
+
+        /* ---------Panel Transistions--------- */
+
+        .panel > *:first-child {
+            transform: translateY(-100%);
+        }
+
+        .panel.open-active > *:first-child {
+            transform: translateY(0);
+            font-size: 1em;
+        }
+
+        .panel > *:last-child {
+            transform: translateY(100%);
+        }
+
+        .panel.open-active > *:last-child {
+            transform: translateY(0);
+            font-size: 1em;
+        }
+
+        .panel p {
+            text-transform: uppercase;
+            font-family: 'helvetica neue', cursive;
+            text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+            font-size: 1.5em;
+        }
+
+        .panel.open {
+            flex: 8;
+            font-size: 40px;
+            text-shadow: 0px 0px 20px black;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .panel p {
+            font-size: 1em;
+            }
+        }
+        </style>
+
+<script>
+    
+//FLEX TRANSITIONS FOR ALL
+  
+const panels = document.querySelectorAll('.panel');
+
+function toggleOpen() {this.classList.toggle('open');}
+
+panels.forEach(panel => panel.addEventListener('click', toggleOpen));
+
+
+//INDIVIDUAL PANELS
+  
+  
+  const panel1 = document.getElementById('p1');
+  const panel2 = document.getElementById('p2');
+  const panel3 = document.getElementById('p3');
+  const panel4 = document.getElementById('p4');
+  const panel5 = document.getElementById('p5');
+  
+  
+  panel1.addEventListener('click', () => {
+    console.log('p1');
+    if (panel1.classList.contains('p1-off')) {
+        panel1.classList.replace('p1-off', 'p1-on')
+    } else {panel1.classList.replace('p1-on', 'p1-off')
+   } 
+  });
+ 
+  panel2.addEventListener('click', () => {
+    console.log('p2');
+    if (panel2.classList.contains('p2-off')) {
+        panel2.classList.replace('p2-off', 'p2-on')
+    } else {panel2.classList.replace('p2-on', 'p2-off')
+   } 
+  });
+
+  panel3.addEventListener('click', () => {
+    console.log('p3');
+    if (panel3.classList.contains('p3-off')) {
+        panel3.classList.replace('p3-off', 'p3-on')
+    } else {panel3.classList.replace('p3-on', 'p3-off')
+   } 
+  });
+
+  panel4.addEventListener('click', () => {
+    console.log('p4');
+    if (panel4.classList.contains('p4-off')) {
+        panel4.classList.replace('p4-off', 'p4-on')
+    } else {panel4.classList.replace('p4-on', 'p4-off')
+   } 
+  });
+
+  panel5.addEventListener('click', () => {
+    console.log('p5');
+    if (panel5.classList.contains('p5-off')) {
+        panel5.classList.replace('p5-off', 'p5-on')
+    } else {panel5.classList.replace('p5-on', 'p5-off')
+   } 
+  });
+
+</script>
+    
+</body>
+</html>
