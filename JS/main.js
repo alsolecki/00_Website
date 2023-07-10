@@ -23,13 +23,14 @@ function foodClock() {
     console.log("I'm the Food Clock!")
 }
 
-function wizards() {
-    console.log("I'm the Wizards page!")
+function path() {
+    console.log("I'm the Pathway page!")
 }
 
 
 
 //EVENT LISTENERS
+
 
 circle1.addEventListener('click', () => {
     resume();
@@ -42,7 +43,9 @@ circle1.addEventListener('mouseleave', () => {
     circle1.classList.remove('grow');
 })
 
-
+/**
+ * button two
+ */
 
 circle2.addEventListener('click', () => {
     sofocoDems();
@@ -54,6 +57,9 @@ circle2.addEventListener('mouseleave', () => {
     circle2.classList.remove('grow');
 })
 
+/**
+ * button three
+ */
 
 circle3.addEventListener('click', () => {
     exhibitGallery()
@@ -65,12 +71,25 @@ circle3.addEventListener('mouseleave', () => {
     circle3.classList.remove('grow');
 })
 
+/**
+ * button four
+ */
+
 circle4.addEventListener('click', () => {
     foodClock()
 });
 
+/**
+ * button five
+ */
 circle5.addEventListener('click', () => {
-    wizards()
+    path()
+});
+circle5.addEventListener('mouseenter', () => {
+    circle5.classList.add('grow');
+});
+circle5.addEventListener('mouseleave', () => {
+    circle5.classList.remove('grow');
 });
 
 
