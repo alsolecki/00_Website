@@ -1,0 +1,217 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-image: url("../images/peter-gargiulo-cGNCepznaV8-unsplash.jpg");
+    background-size: cover;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.3;
+    margin: 0px;
+    padding: 0px;
+    background-color: #202020;
+    color: #ffffff;
+}
+
+/*----- GLOBALS ABOVE ------ */
+
+/* 
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map. 
+ */
+ #map {
+    height: 270px;
+    width: 270px;
+    border: magenta 3px solid;
+  }
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 320px 500px 250px;
+    grid-gap: 20px;
+    padding: 30px 30px 15px;
+    justify-content: center;
+    /* border: yellow solid 3px; */
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.title{
+    max-width: 420px;
+    min-width: 300px;
+    /* border: blue solid 2px; */
+    display: flex;
+    flex-direction: column;
+    padding-left: 12px;
+}
+.title p, .title h3, .title h4 {
+    margin: 4px;
+}
+
+.item {
+    background-color: rgba(255, 255, 255, .1);
+}
+
+.header {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 3.5em;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+.header h3 {
+    margin-top: 0px
+}
+
+.left-bar, .right-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* border: red solid 1px; */
+}
+
+.right-bar h2 {
+    text-align: center;
+}
+
+#placemat {
+    height: 340px;
+    width: 460px;
+    margin: 12px;
+    border: 2px solid rgb(10, 10, 10);
+    border-radius: 35%;  
+}
+.pmInformal {
+    background-image: url("../IMG/placesetting.png");
+    background-size: 152%;
+    background-position-x: 44%;
+    background-position-y: 16%; 
+}
+.pmFormal {
+    background-image: url("../IMG/placesetting.png");
+    background-size: 137%;
+    background-position-x: 52%;
+    background-position-y: 92%; 
+}
+
+.pmFood1 {
+    background-image: url("../IMG/mamaSpecialDumpling.jpg");
+    background-size: 137%;
+    background-position-x: 52%;
+    background-position-y: 92%; 
+}
+
+.pmFood2 {
+    background-image: url("../IMG/papusaRevuelta_laCasita.png");
+    background-size: 137%;
+    background-position-x: 52%;
+    background-position-y: 92%; 
+}
+.pmFood3 {
+    background-image: url("../IMG/pizza.jpeg");
+    background-size: 137%;
+    background-position-x: 52%;
+    background-position-y: 92%; 
+}
+.pmFood4 {
+    background-image: url("../IMG/burger.jpeg");
+    background-size: 137%;
+    background-position-x: 52%;
+    background-position-y: 92%; 
+}
+.pmFood5 {
+    background-image: url("../IMG/wings.jpeg");
+    background-size: 137%;
+    background-position-x: 52%;
+    background-position-y: 92%; 
+}
+.pmFood6 {
+    background-image: url("../IMG/bagellox.jpeg");
+    background-size: 137%;
+    background-position-x: 52%;
+    background-position-y: 92%; 
+}
+
+
+.main {
+    grid-row: span 3;
+    background-color: none;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    /* border: solid red 1px; */
+}
+
+.bottom-bar {
+    grid-column: span 3;   
+    min-height: 150px;
+    border: solid 1px rgba(255, 255, 255, .2);
+    display: grid;
+    justify-content: center;
+    border-radius: 2%; 
+    grid-template-rows: 30px 50px;
+    padding-top: 10px;
+}
+
+.header-line {
+    display: flex;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    border-top: rgb(255, 0, 132) dotted 6px;
+    justify-content: space-evenly;
+    height: 40px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.footer-line {
+    display: flex;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    border-top: orange dotted 6px;
+    justify-content: space-evenly;
+    height: 65px;
+    margin-top: 50px;
+}
+
+.field {
+    background-color: rgb(20, 20, 20);
+}
+
+
+/* Selection */
+.smallCircle {
+    width: 30px;
+    height: 30px;
+    border-radius: 25%;
+    border: rgb(255, 94, 0) 4px solid;
+    text-align: center;
+    background-color: black;
+}
+
+label {
+    font-family: sans-serif;
+    font-size: 1rem;
+    padding-right: 10px;
+}
+
+select {
+    font-size: 1.4rem;
+    padding: 2px 5px;
+}
+
+.selector {
+    border: red 2px solid;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    
+}

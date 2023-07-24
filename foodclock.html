@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodClock 1.0</title>
+    <link href="CSS/foodClockstyle.css" rel="stylesheet">
+    <script>
+        (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+            key: "AIzaSyCPCG6xvoo6QX8daI9C-CIawG2lqQ6J6qQ",
+            v: "weekly",
+            // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
+            // Add other bootstrap parameters as needed, using camel case.
+        });
+        </script>
+</head>
+<body>
+    <div class="header item1">
+        <h1>FoodClock</h1>
+        <h3>What Are You Eating Today?</h3>
+    </div>
+    
+    <div class="header-line">
+        <div class="smallCircle">A</div>
+        <div class="smallCircle">B</div>
+        <div class="smallCircle">C</div>
+        <div class="smallCircle">D</div>
+        <div class="smallCircle">E</div>
+    </div>
+
+            <!-- WRAPPER  -->
+    <div class="wrapper">
+
+            <!--  //////////// Left Bar /////////////-->
+        <div class="item left-bar">
+            <div></div>
+            <h2>Select Your Craving</h2>
+            
+            
+            <!-- <form action="index.html" method="post">
+                <input type="text" id="name" user="name">
+            </form> -->
+
+            <form class="selector">
+                <!-- <label for="options">Craving</label>  -->
+                <select id="sel" name="cravings">
+                    <option disabled selected value> -- select -- </option>
+                    <option value="pizza">pizza</option>
+                    <option value="papusas">papusas</option>
+                    <option value="lox">lox</option>
+                    <option value="dumpling">dumpling</option>
+                    <option value="burger">burger</option>
+                    <option value="wings">wings</option>
+                </select>
+                 
+                
+                <div class="result"></div>
+                
+            </form>
+
+
+            <!--  //////////// Inset Map Feature /////////////-->
+            
+                <div id="map"></div>
+           
+        </div>     
+
+
+            <!--  //////////// Dining Area  /////////////-->
+            <div class="main">  
+                <div class="title">
+                    <h3 class="name"></h3>
+                    <h4 class="restaurant"></h4>
+                    <p class="desc"></p>
+                </div> 
+                <div id="placemat" class="pmInformal">
+                     <!-- <div id="plate"></div> -->
+                </div>
+            </div>
+
+            
+            <!--  //////////// Right Bar /////////////-->
+            <div class="item right-bar">
+                <h2>Add New Craving</h2>
+
+                <fieldset class="field">
+                    <!-- <legend>Input New Craving</legend> -->
+                    <form>
+                    <!-- Name Input -->    
+                        <div>
+                          <label for="example">Name of Item</label>
+                          <input id="example" type="text" name="text" />
+                        </div>
+                    <!-- Place Input -->
+                        <div>
+                          <label for="example">Origin of Item</label>
+                          <input id="example" type="text" name="text" />
+                        </div>
+                    <!-- Timestamp -->
+                        <label for="appt">When?</label><br>
+                        <input type="date" id="appt" name="appt" min="09:00" max="18:00" required>
+                        <input type="time" id="appt" name="appt" min="09:00" max="18:00" required>
+                     <!-- Description Input -->
+                        <div>
+                         <label for="example">Description</label>
+                         <textarea name="comments" cols="20" rows="4">
+                            Desciption...
+                         </textarea>
+                        </div>
+                     <!-- Add Image Input -->
+                        <div>
+                         <label for="example">Add Image</label>
+                         <input id="example" type="text" name="text" />
+                        </div>
+                        
+                    <!-- Submit Button -->
+                        <div>
+                            <input type="submit" value="Submit" />
+                        </div>
+                    </form>
+                </fieldset>
+            </div>
+        </div>
+        
+        <!-- FOOTER LINE -->
+            <div class="footer-line">
+                <div class="smallCircle">A</div>
+                <div class="smallCircle">B</div>
+                <div class="smallCircle">C</div>
+                <div class="smallCircle">D</div>
+                <div class="smallCircle">E</div>
+            </div>
+    </div>
+    
+
+<script src="JS/cravings.js"></script>
+<script src="JS/placemat.js"></script>
+<script src="JS/foodclock.js"></script>
+  
+</body>
+</html>
