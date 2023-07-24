@@ -12,6 +12,22 @@
     </head>
 
 <body>
+    <!--   HEADER NAVIGATION   -->
+    <div class="header">
+        <h1>Resume</h1>
+        <h3>About Me</h3>
+    </div>
+
+    <div class="header-line">
+        <div class="smallCircle">A</div>
+        <div class="smallCircle">B</div>
+        <div class="smallCircle">C</div>
+        <div class="smallCircle">D</div>
+        <div class="smallCircle">E</div>
+    </div>
+    <!--   END HEADER NAVIGATION   -->
+
+     <!--   START OF RESUME   -->
     <div id="container">
         <div class="head-name">
             <h1>ALEXANDER SOLECKI</h1>
@@ -83,7 +99,16 @@
                 <h4>August 2003 - May 2007</h4>
             </div>
         </div>
-    
+     </div>
+        <!-- FOOTER NAV -->
+        <div class="footer-line">
+            <div class="smallCircle">A</div>
+            <div class="smallCircle">B</div>
+            <div class="smallCircle">C</div>
+            <div class="smallCircle">D</div>
+            <div class="smallCircle">E</div>
+        </div>
+        <!-- END FOOTER NAV -->
 
 <style>
 
@@ -154,6 +179,53 @@ h4 { font-weight: 200;}
 .school {grid-row-start: 4; grid-column-start: 3;}
 .school h3, .school p {margin-top: 2px; margin-bottom: 8px;}
 .school h4 {margin-top: 2px; margin-bottom: 2px;}
+
+
+
+/*  NAVBAR  */ 
+
+.header-line {
+    display: flex;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    border-top: rgb(255, 0, 132) dotted 6px;
+    justify-content: space-evenly;
+    height: 40px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.footer-line {
+    display: flex;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    border-top: orange dotted 6px;
+    justify-content: space-evenly;
+    height: 65px;
+    margin-top: 50px;
+}
+
+.smallCircle {
+    width: 30px;
+    height: 30px;
+    border-radius: 25%;
+    border: rgb(255, 94, 0) 4px solid;
+    text-align: center;
+    background-color: transparent;
+}
+
+.header {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 3.5em;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+
 
 /* 
 ***********************************

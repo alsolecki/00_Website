@@ -4,15 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/normalize.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet"/>
+    <link href="CSS/normalize.css" rel="stylesheet" />
 
      <title>Exhibit Gallery</title>
     
 </head>
 <body>
+
+    <!--   HEADER NAVIGATION   -->
+    <div class="header">
+        <h1>Gallery</h1>
+        <h3>Exhibit Design Portfolio</h3>
+    </div>
+
+    <div class="header-line">
+        <div class="smallCircle">A</div>
+        <div class="smallCircle">B</div>
+        <div class="smallCircle">C</div>
+        <div class="smallCircle">D</div>
+        <div class="smallCircle">E</div>
+    </div>
+    <!--   END HEADER NAVIGATION   -->
+
+    
 <header>
-    <h1>Portfolio</h1>
+    <h1></h1>
 </header>
 
 <div class="panels">
@@ -45,8 +61,19 @@
   </div>
 
   <footer>
-    <h4>Exhibits Designs by Alex Solecki</h4>
+    <h4></h4>
   </footer>
+
+ <!-- FOOTER NAV -->
+ <div class="footer-line">
+    <div class="smallCircle">A</div>
+    <div class="smallCircle">B</div>
+    <div class="smallCircle">C</div>
+    <div class="smallCircle">D</div>
+    <div class="smallCircle">E</div>
+</div>
+<!-- END FOOTER NAV -->
+
 
   <style>
             :root {
@@ -54,21 +81,7 @@
             --darktan:rgb(86, 83, 65);
         }
 
-
-        h1 {
-            color: white;
-            font-size: 1.5em;
-            padding-left: 30px;
-        }
-
-        h4 {
-            color: white;
-            font-size: .75em;
-            padding-top: 20px;
-            padding-left: 30px;
-
-        }
-
+        
         html {
             box-sizing: border-box;
             background: #000000;
@@ -76,14 +89,17 @@
             font-size: 20px;
             font-weight: 200;
         }
-
+        
         body {
             margin: 0;
         }
-
+        
         *, *:before, *:after {
             box-sizing: inherit;
         }
+        
+        .header h1, h3 { color: white; }
+
 
         .panels {
             min-height: 70vh;
@@ -117,44 +133,30 @@
         /////////////   Image Panels  ////////////////
         */
 
-        .p1-on { 
-                    background-image:url(../IMG/Bluegrass01.jpg);
-                
-        }
-        .p1-off { background-image:url(../IMG/Bluegrass01.jpg); 
+        .p1-on { background-image:url(./IMG/Bluegrass01.jpg);}
+        .p1-off { background-image:url(./IMG/Bluegrass01.jpg); 
                     background-color: var(--darkblue);
-                    background-blend-mode: multiply;
-                
-        }
+                    background-blend-mode: multiply;}
 
-        .p2-on { 
-                    background-image:url(../IMG/BrunswickByways01.jpg);
-        }
-        .p2-off { background-image:url(../IMG/BrunswickByways01.jpg); 
+        .p2-on { background-image:url(./IMG/BrunswickByways01.jpg);}
+        .p2-off { background-image:url(./IMG/BrunswickByways01.jpg); 
                     background-color: var(--darkblue);
-                    background-blend-mode: multiply;
-        }
+                    background-blend-mode: multiply; }
 
-        .p3-on { background-image:url(../IMG/CentralGallery01.jpg); 
-        }
-        .p3-off { background-image:url(../IMG/CentralGallery01.jpg); 
+        .p3-on { background-image:url(./IMG/CentralGallery01.jpg);}
+        .p3-off { background-image:url(./IMG/CentralGallery01.jpg); 
                     background-color: var(--darkblue);
-                    background-blend-mode: multiply;
-        }
+                    background-blend-mode: multiply; }
 
-        .p4-on { background-image:url(../IMG/NSHoF01.jpg); 
-        }
-        .p4-off { background-image:url(../IMG/NSHoF01.jpg); 
+        .p4-on { background-image:url(./IMG/NSHoF01.jpg);}
+        .p4-off { background-image:url(./IMG/NSHoF01.jpg); 
                     background-color: var(--darkblue);
-                    background-blend-mode: multiply;
-        }
+                    background-blend-mode: multiply;}
 
-        .p5-on { background-image:url(../IMG/Sailing01.jpeg); 
-        }
-        .p5-off { background-image:url(../IMG/Sailing01.jpeg); 
+        .p5-on { background-image:url(./IMG/Sailing01.jpeg);}
+        .p5-off { background-image:url(./IMG/Sailing01.jpeg); 
                     background-color:  var(--darkblue);
-                    background-blend-mode: multiply;
-        }
+                    background-blend-mode: multiply;}
 
         /* Flex Items */
         .panel > * {
@@ -201,12 +203,65 @@
             text-shadow: 0px 0px 20px black;
         }
 
+
+        /*  NAVBAR  */ 
+
+        .header-line {
+            display: flex;
+            grid-column-start: 1;
+            grid-column-end: 4;
+            border-top: rgb(255, 0, 132) dotted 6px;
+            justify-content: space-evenly;
+            height: 40px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .footer-line {
+            display: flex;
+            grid-column-start: 1;
+            grid-column-end: 4;
+            border-top: orange dotted 6px;
+            justify-content: space-evenly;
+            height: 65px;
+            margin-top: 50px;
+        }
+
+        .smallCircle {
+            width: 30px;
+            height: 30px;
+            border-radius: 25%;
+            border: rgb(255, 94, 0) 4px solid;
+            text-align: center;
+            background-color: transparent;
+            color: white;
+        }
+
+        .header {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 3.5em;
+            margin-top: 5px;
+            margin-bottom: 0px;
+        }
+
+
+
+
+
+        /*   MEDIA QUERY   */
+
         @media only screen and (max-width: 600px) {
             .panel p {
             font-size: 1em;
             }
         }
         </style>
+
+
 
 <script>
     

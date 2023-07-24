@@ -9,8 +9,26 @@
 
     <title>SoFoCoDems</title>
 </head>
+
 <body>
-    
+    <!--   HEADER NAVIGATION   -->
+    <div class="header">
+        <h1>SoFoCoDems</h1>
+        <h3>Web Frindly Flier</h3>
+    </div>
+
+    <div class="header-line">
+        <div class="smallCircle">A</div>
+        <div class="smallCircle">B</div>
+        <div class="smallCircle">C</div>
+        <div class="smallCircle">D</div>
+        <div class="smallCircle">E</div>
+    </div>
+    <!--   END HEADER NAVIGATION   -->
+
+
+
+
     <div class="print-header">
         <div>
             <div class="print-logo"></div>
@@ -255,6 +273,16 @@
 
     </div>
 
+    <!-- FOOTER NAV -->
+    <div class="footer-line">
+        <div class="smallCircle">A</div>
+        <div class="smallCircle">B</div>
+        <div class="smallCircle">C</div>
+        <div class="smallCircle">D</div>
+        <div class="smallCircle">E</div>
+    </div>
+    <!-- END FOOTER NAV -->
+
     <style>
         html {
     font-size: 100%;
@@ -386,7 +414,6 @@ h1 {
 }
 
 
-
 /* -------  CONTACT TABLE ------------ */
 
 table {
@@ -471,12 +498,49 @@ td.info.office p{
     padding-bottom: 5px;
 }
 
-/* .footer p:nth-child(2),
-.footer p:nth-child(3) {
-    font-size: .9em;
-    padding-bottom: 3px;
 
-} */
+/*  NAVBAR  */ 
+
+.header-line {
+    display: flex;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    border-top: rgb(255, 0, 132) dotted 6px;
+    justify-content: space-evenly;
+    height: 40px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.footer-line {
+    display: flex;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    border-top: orange dotted 6px;
+    justify-content: space-evenly;
+    height: 65px;
+    margin-top: 50px;
+}
+
+.smallCircle {
+    width: 30px;
+    height: 30px;
+    border-radius: 25%;
+    border: rgb(255, 94, 0) 4px solid;
+    text-align: center;
+    background-color: transparent;
+}
+
+.header {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 3.5em;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
 
 /* 
 ***********************************

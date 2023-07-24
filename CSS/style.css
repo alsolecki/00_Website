@@ -4,9 +4,9 @@ html {
     font-family: 'Montserrat', sans-serif;
 }
 
-/* *, *::before, *::after {
+*, *::before, *::after {
     box-sizing: inherit;
-} */
+}
 
 h1 {
     font-size: 3em;
@@ -73,4 +73,37 @@ h1 {
     border: yellow 2px solid;
     box-shadow: 0 0 10px yellowgreen;
     transform: scale(1.1);
+}
+
+
+/*  NAVBAR  */ 
+
+.header-line {
+    display: flex;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    border-top: rgb(255, 0, 132) dotted 6px;
+    justify-content: space-evenly;
+    height: 40px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.footer-line {
+    display: flex;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    border-top: orange dotted 6px;
+    justify-content: space-evenly;
+    height: 65px;
+    margin-top: 50px;
+}
+
+.smallCircle {
+    min-width: 30px;
+    min-height: 30px;
+    border-radius: 10%;
+    border: rgb(255, 94, 0) 4px solid;
+    text-align: center;
+    background-color: transparent;
 }
