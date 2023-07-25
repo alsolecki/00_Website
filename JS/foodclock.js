@@ -23,11 +23,9 @@ function showDumplings()
     foodPic.classList.add('pmFood1')
 
     /// Let coordinates of map show correct location
-
-
-
-
 }
+
+
 
 function showPapusas() 
 {
@@ -163,3 +161,28 @@ async function initMap() {
 
 
 initMap();
+
+/*
+//////////     Placemat Swap
+*/
+
+const pmImage = document.getElementById('placemat');
+
+function pmSwap() {
+    pmImage.classList.replace('pmInformal','pmFormal');
+}
+
+function pmFood() {
+    pmImage.classList.add('pmFood1')
+}
+
+function pmSwapBack() {
+    pmImage.classList.replace('pmFormal','pmInformal');
+}
+
+pmImage.addEventListener('click', (e) => {
+    if (e.target.classList == 'pmInformal') {
+        pmSwap();} else {pmSwapBack();}
+    });
+
+const item = document.getElementsByClassName('circle item')[3];

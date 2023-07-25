@@ -190,12 +190,17 @@ body {
 
 /* Selection */
 .smallCircle {
-    width: 30px;
+    min-width: 30px;
     height: 30px;
-    border-radius: 25%;
+    border-radius: 10%;
     border: rgb(255, 94, 0) 4px solid;
     text-align: center;
     background-color: black;
+}
+
+.smallCircle h4 {
+    color: lime;
+    margin: 0px;
 }
 
 label {
