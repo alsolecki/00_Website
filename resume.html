@@ -13,12 +13,12 @@
 
 <body>
     <!--   HEADER NAVIGATION   -->
-    <div class="header">
+    <div class="header no-print">
         <h1>Resume</h1>
         <h3>About Me</h3>
     </div>
 
-    <div class="header-line">
+    <div class="header-line no-print">
         <div class="smallCircle">A</div>
         <div class="smallCircle">B</div>
         <div class="smallCircle">C</div>
@@ -31,20 +31,22 @@
     <div id="container">
         <div class="head-name">
             <h1>ALEXANDER SOLECKI</h1>
-            <h2>DESIGNER &<br>DEVELOPER</h2>
+            
             <p>alsolecki@gmail.com</p>
             <p>301.254.0200</p>
+            <p>Washington, DC</p>
             <p>www.alsolecki.com</p>
         </div>
         <div class="head-desc">
-            <p>I am a creative, motivated and resourceful developer who seeks quality solutions to design problems.  A flexible and personable worker in both individual and team environments, I'm currently in a career transition from exhibition design to web development.</p>
+            <h2>FRONT-END DEVELOPER</h2>
+            <p>I am a creative, motivated and resourceful front-end developer with a background in design. A reliable, flexible and personable worker in both individual and team environments.</p>
         </div>
 
         <!-- //////// EXPERIENCE ///////// -->
         <div class="experience">
             <h2>EXPERIENCE</h2>
             
-            <h3>Web Developer in Training</h3>
+            <h3>Software Development Training</h3>
             <h4>March 2023 - Present | Silver Spring, MD</h4>
             <ul>
                 <li>Completed educational programs including Treehouse's Front End Web Development Track and Wes Bos JS30 Challenge </li>
@@ -76,17 +78,17 @@
             <ul>
                 <li>HTML</li>
                 <li>CSS</li>
-                <li>JavaScript</li>           
+                <li>JavaScript</li> 
+                <li>React</li>          
                 <li>Graphic Communication</li>
                 <li>User Experience Design</li>
                 <li>Concept Development</li>
-                <li>Exhibit Design</li>
-                <li>Space Planning</li>          
+                <li>Exhibit Design</li>          
                 <li>Adobe Suites</li>
                 <li>AutoCAD</li>
                 <li>3D Modeling & Rendering</li>
                 <li>Sketchup + V-Ray</li>
-                <li>Blender</li>
+                <li>Blender & WebGL</li>
             </ul>
       </div>
           <!-- ///////// EDUCATION //////////// -->
@@ -101,7 +103,7 @@
         </div>
      </div>
         <!-- FOOTER NAV -->
-        <div class="footer-line">
+        <div class="footer-line no-print">
             <div class="smallCircle">A</div>
             <div class="smallCircle">B</div>
             <div class="smallCircle">C</div>
@@ -129,9 +131,11 @@ h4 { font-weight: 200;}
     height: 1370px;
     display: grid;
     grid-template-columns: 320px 380px 320px;
-    grid-template-rows: 400px 460px auto;
+    grid-template-rows: 360px 460px auto;
     margin: auto;
     padding-left: 30px;
+    page-break-before: always;
+    page-break-after: always;
 }
 
 .head-name {
@@ -144,20 +148,26 @@ h4 { font-weight: 200;}
 
 .head-name h1 { font-weight: 400; font-size: 2.18em; margin-top: 16px; margin-bottom: 20px }
 
-.head-name h2 { margin-top: 2px; margin-bottom: 4px; }
+.head-desc h2 { 
+    margin-top: 2px;
+    margin-bottom: 4px; }
 
-.head-name p { font-size: 1.1em; margin-top: 7px; margin-bottom: 4px; font-weight: 200; }
+.head-name p { 
+    font-size: 0.95em;
+    margin-top: 8px;
+    margin-bottom: 4px;
+    font-weight: 200; }
 
 .head-desc {
     grid-column-start: 2;
     grid-column-end: 4;
     padding-left: 30px;
-    padding-top: 140px;
+    padding-top: 105px;
     padding-right: 40px;
 }
 
 .head-desc p {
-    font-size: 1.2em;
+    font-size: 1.17em;
     line-height: 2em;
     color: rgb(100,100,100);
 }
@@ -233,11 +243,18 @@ h4 { font-weight: 200;}
 ***********************************
 */
 @media print {
+
+    .no-print {
+        display: none;
+    }
+
 }
 
 @page {
     margin: .2in;
 }
+
+
 
 </style>
 
